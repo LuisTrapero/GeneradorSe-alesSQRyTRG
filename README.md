@@ -1,4 +1,4 @@
-# Generador Señales
+# Generador Señales V1.0
 Pequeño circuito diseñado en KiCad para generar señales cuadrada y triangular en fase. El circuito consta de cuatro partes:
 
 1. **Un oscilador:** Empleamos el oscilador del circuito integrado CD4046 para generar una señal cuadrada de frecuencia variable. La frecuencia de las señales se puede ajustar mediante un potenciómetro o mediante una tensión externa al circuito.
