@@ -1,0 +1,543 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:TFGLibrary
+LIBS:Circuito generador señales-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R Rvco1
+U 1 1 59A2EDA5
+P 2000 3050
+F 0 "Rvco1" V 2080 3050 50  0000 C CNN
+F 1 "100k" V 2000 3050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1930 3050 50  0001 C CNN
+F 3 "" H 2000 3050 50  0001 C CNN
+	1    2000 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C Cvco1
+U 1 1 59A2EEE3
+P 2000 2700
+F 0 "Cvco1" H 2025 2800 50  0000 L CNN
+F 1 "100p" H 2025 2600 50  0000 L CNN
+F 2 "Capacitors_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 2038 2550 50  0001 C CNN
+F 3 "" H 2000 2700 50  0001 C CNN
+	1    2000 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper JP1
+U 1 1 59A2F76C
+P 4150 3450
+F 0 "JP1" H 4150 3600 50  0000 C CNN
+F 1 "Jumper" H 4150 3370 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm" H 4150 3450 50  0001 C CNN
+F 3 "" H 4150 3450 50  0001 C CNN
+	1    4150 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT Pvco1
+U 1 1 59A2F7B2
+P 4600 3450
+F 0 "Pvco1" V 4425 3450 50  0000 C CNN
+F 1 "10k" V 4500 3450 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_ACP_CA9h3.8_Vertical_Px3.8mm_Py5.0mm" H 4600 3450 50  0001 C CNN
+F 3 "" H 4600 3450 50  0001 C CNN
+	1    4600 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 3350 2350 3350
+Wire Wire Line
+	3850 2850 3850 3450
+Text Label 4400 3100 0    60   ~ 0
++5V
+$Comp
+L GND #PWR01
+U 1 1 59A30422
+P 1850 3450
+F 0 "#PWR01" H 1850 3200 50  0001 C CNN
+F 1 "GND" H 1850 3300 50  0000 C CNN
+F 2 "" H 1850 3450 50  0001 C CNN
+F 3 "" H 1850 3450 50  0001 C CNN
+	1    1850 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 59A30A72
+P 4600 3750
+F 0 "#PWR02" H 4600 3500 50  0001 C CNN
+F 1 "GND" H 4600 3600 50  0000 C CNN
+F 2 "" H 4600 3750 50  0001 C CNN
+F 3 "" H 4600 3750 50  0001 C CNN
+	1    4600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3600 4600 3750
+$Comp
+L Battery BT1
+U 1 1 59A30BB9
+P 1050 2900
+F 0 "BT1" H 1150 3000 50  0000 L CNN
+F 1 "5" H 1150 2900 50  0000 L CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" V 1050 2960 50  0001 C CNN
+F 3 "" V 1050 2960 50  0001 C CNN
+	1    1050 2900
+	1    0    0    -1  
+$EndComp
+Text Label 850  2450 0    60   ~ 0
++5V
+$Comp
+L GND #PWR03
+U 1 1 59A30DC1
+P 700 3250
+F 0 "#PWR03" H 700 3000 50  0001 C CNN
+F 1 "GND" H 700 3100 50  0000 C CNN
+F 2 "" H 700 3250 50  0001 C CNN
+F 3 "" H 700 3250 50  0001 C CNN
+	1    700  3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 3100 1050 3400
+$Comp
+L TL081 U2
+U 1 1 59A31C8C
+P 7150 3300
+F 0 "U2" H 7150 3550 50  0000 L CNN
+F 1 "TL081" H 7150 3450 50  0000 L CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm_Socket" H 7200 3350 50  0001 C CNN
+F 3 "" H 7300 3450 50  0001 C CNN
+	1    7150 3300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5400 3000 6250 3000
+$Comp
+L R Rs1
+U 1 1 59A3212A
+P 6400 3000
+F 0 "Rs1" V 6480 3000 50  0000 C CNN
+F 1 "10k" V 6400 3000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6330 3000 50  0001 C CNN
+F 3 "" H 6400 3000 50  0001 C CNN
+	1    6400 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L R Rs2
+U 1 1 59A32191
+P 6400 3200
+F 0 "Rs2" V 6480 3200 50  0000 C CNN
+F 1 "20k" V 6400 3200 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6330 3200 50  0001 C CNN
+F 3 "" H 6400 3200 50  0001 C CNN
+	1    6400 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6250 3200 6050 3200
+Wire Wire Line
+	6850 3200 6550 3200
+Wire Wire Line
+	6550 3000 6700 3000
+Wire Wire Line
+	6700 3000 6700 3200
+Connection ~ 6700 3200
+Text Label 6050 3200 0    60   ~ 0
+-5V
+$Comp
+L R Rs4
+U 1 1 59A326D7
+P 6700 3600
+F 0 "Rs4" V 6780 3600 50  0000 C CNN
+F 1 "1k" V 6700 3600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6630 3600 50  0001 C CNN
+F 3 "" H 6700 3600 50  0001 C CNN
+	1    6700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 59A3274A
+P 6700 3900
+F 0 "#PWR04" H 6700 3650 50  0001 C CNN
+F 1 "GND" H 6700 3750 50  0000 C CNN
+F 2 "" H 6700 3900 50  0001 C CNN
+F 3 "" H 6700 3900 50  0001 C CNN
+	1    6700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3450 6700 3400
+Wire Wire Line
+	6700 3400 6850 3400
+Wire Wire Line
+	6700 3750 6700 3900
+Text Label 7050 3600 3    60   ~ 0
++5V
+Text Label 7050 3000 1    60   ~ 0
+-5V
+$Comp
+L R Rs3
+U 1 1 59A328EE
+P 7150 2600
+F 0 "Rs3" V 7230 2600 50  0000 C CNN
+F 1 "10k" V 7150 2600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7080 2600 50  0001 C CNN
+F 3 "" H 7150 2600 50  0001 C CNN
+	1    7150 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 2600 6800 2600
+Wire Wire Line
+	6800 2600 6800 3200
+Connection ~ 6800 3200
+Wire Wire Line
+	7300 2600 7650 2600
+Wire Wire Line
+	7650 2600 7650 3300
+Connection ~ 7650 3300
+$Comp
+L R Ri1
+U 1 1 59A329BF
+P 8400 3300
+F 0 "Ri1" V 8480 3300 50  0000 C CNN
+F 1 "1.25k" V 8400 3300 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 3300 50  0001 C CNN
+F 3 "" H 8400 3300 50  0001 C CNN
+	1    8400 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L TL081 U3
+U 1 1 59A32A7E
+P 9200 3400
+F 0 "U3" H 9200 3650 50  0000 L CNN
+F 1 "TL081" H 9200 3550 50  0000 L CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm_Socket" H 9250 3450 50  0001 C CNN
+F 3 "" H 9350 3550 50  0001 C CNN
+	1    9200 3400
+	1    0    0    1   
+$EndComp
+$Comp
+L C Ci1
+U 1 1 59A32B11
+P 9200 2700
+F 0 "Ci1" H 9225 2800 50  0000 L CNN
+F 1 "10n" H 9225 2600 50  0000 L CNN
+F 2 "Capacitors_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal" H 9238 2550 50  0001 C CNN
+F 3 "" H 9200 2700 50  0001 C CNN
+	1    9200 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L R Ri2
+U 1 1 59A32BBE
+P 9200 2350
+F 0 "Ri2" V 9280 2350 50  0000 C CNN
+F 1 "8k" V 9200 2350 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 2350 50  0001 C CNN
+F 3 "" H 9200 2350 50  0001 C CNN
+	1    9200 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9050 2350 8700 2350
+Wire Wire Line
+	9350 2350 9700 2350
+Text Label 9100 3700 3    60   ~ 0
++5V
+Text Label 9100 3100 1    60   ~ 0
+-5V
+Wire Wire Line
+	8550 3300 8900 3300
+Wire Wire Line
+	9500 3400 10350 3400
+Wire Wire Line
+	8700 2350 8700 3300
+Connection ~ 8700 3300
+Wire Wire Line
+	9700 2350 9700 3400
+Connection ~ 9700 3400
+Wire Wire Line
+	9350 2700 9700 2700
+Connection ~ 9700 2700
+Wire Wire Line
+	9050 2700 8700 2700
+Connection ~ 8700 2700
+$Comp
+L GND #PWR05
+U 1 1 59A34ABE
+P 8700 4000
+F 0 "#PWR05" H 8700 3750 50  0001 C CNN
+F 1 "GND" H 8700 3850 50  0000 C CNN
+F 2 "" H 8700 4000 50  0001 C CNN
+F 3 "" H 8700 4000 50  0001 C CNN
+	1    8700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R Ri3
+U 1 1 59A34AF0
+P 8700 3750
+F 0 "Ri3" V 8780 3750 50  0000 C CNN
+F 1 "1k" V 8700 3750 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8630 3750 50  0001 C CNN
+F 3 "" H 8700 3750 50  0001 C CNN
+	1    8700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3600 8700 3500
+Wire Wire Line
+	8700 3500 8900 3500
+Wire Wire Line
+	8700 3900 8700 4000
+$Comp
+L Battery BT2
+U 1 1 59A359CC
+P 1050 3600
+F 0 "BT2" H 1150 3700 50  0000 L CNN
+F 1 "5" H 1150 3600 50  0000 L CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" V 1050 3660 50  0001 C CNN
+F 3 "" V 1050 3660 50  0001 C CNN
+	1    1050 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 4050 1050 3800
+Wire Wire Line
+	1050 2450 1050 2700
+Wire Wire Line
+	750  4050 1050 4050
+Wire Wire Line
+	700  3250 1050 3250
+Text Label 850  4050 0    60   ~ 0
+-5V
+$Comp
+L 4046 U1
+U 1 1 59A3BC5B
+P 3050 2850
+F 0 "U1" H 3050 2750 50  0000 C CNN
+F 1 "4046" H 3050 2950 50  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm_Socket" H 3050 2850 60  0001 C CNN
+F 3 "" H 3050 2850 60  0001 C CNN
+	1    3050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2850 2350 2850
+Wire Wire Line
+	2000 2550 2150 2550
+Wire Wire Line
+	2150 2550 2150 2750
+Wire Wire Line
+	2150 2750 2350 2750
+Wire Wire Line
+	2350 3050 2150 3050
+Wire Wire Line
+	1850 3050 1850 3450
+Connection ~ 1850 3350
+Wire Wire Line
+	4600 3300 4600 3100
+Wire Wire Line
+	4600 3100 4400 3100
+NoConn ~ 2350 3150
+NoConn ~ 7150 3000
+NoConn ~ 7250 3000
+NoConn ~ 2350 2450
+NoConn ~ 2350 2550
+NoConn ~ 3750 3150
+NoConn ~ 3750 3050
+NoConn ~ 3750 3250
+NoConn ~ 3750 2650
+NoConn ~ 3750 2550
+Wire Wire Line
+	8250 3300 7450 3300
+Wire Wire Line
+	5400 3000 5400 2450
+Wire Wire Line
+	5400 2450 3750 2450
+NoConn ~ 9200 3100
+NoConn ~ 9300 3100
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 59A4D3AF
+P 700 3250
+F 0 "#FLG06" H 700 3325 50  0001 C CNN
+F 1 "PWR_FLAG" H 700 3400 50  0000 C CNN
+F 2 "" H 700 3250 50  0001 C CNN
+F 3 "" H 700 3250 50  0001 C CNN
+	1    700  3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2450 750  2450
+$Comp
+L PWR_FLAG #FLG07
+U 1 1 59A4D782
+P 750 2450
+F 0 "#FLG07" H 750 2525 50  0001 C CNN
+F 1 "PWR_FLAG" H 750 2600 50  0000 C CNN
+F 2 "" H 750 2450 50  0001 C CNN
+F 3 "" H 750 2450 50  0001 C CNN
+	1    750  2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG08
+U 1 1 59A4DB5F
+P 750 4050
+F 0 "#FLG08" H 750 4125 50  0001 C CNN
+F 1 "PWR_FLAG" H 750 4200 50  0000 C CNN
+F 2 "" H 750 4050 50  0001 C CNN
+F 3 "" H 750 4050 50  0001 C CNN
+	1    750  4050
+	1    0    0    -1  
+$EndComp
+Text Label 1050 2500 3    60   ~ 0
+Vdd
+Connection ~ 1050 3250
+Text Label 850  3250 0    60   ~ 0
+Vss
+$Comp
+L R Rr1
+U 1 1 59A4F5AB
+P 10350 3700
+F 0 "Rr1" V 10430 3700 50  0000 C CNN
+F 1 "74.8k" V 10350 3700 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10280 3700 50  0001 C CNN
+F 3 "" H 10350 3700 50  0001 C CNN
+	1    10350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R Rr2
+U 1 1 59A4FA57
+P 10350 4150
+F 0 "Rr2" V 10430 4150 50  0000 C CNN
+F 1 "1k" V 10350 4150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10280 4150 50  0001 C CNN
+F 3 "" H 10350 4150 50  0001 C CNN
+	1    10350 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 3400 10350 3550
+Wire Wire Line
+	10350 3850 10350 4000
+Wire Wire Line
+	10350 4300 10350 4450
+$Comp
+L GND #PWR09
+U 1 1 59A4FBC2
+P 10350 4450
+F 0 "#PWR09" H 10350 4200 50  0001 C CNN
+F 1 "GND" H 10350 4300 50  0000 C CNN
+F 2 "" H 10350 4450 50  0001 C CNN
+F 3 "" H 10350 4450 50  0001 C CNN
+	1    10350 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 3950 10650 3950
+Connection ~ 10350 3950
+$Comp
+L CONN_01X02 J3
+U 1 1 59A70000
+P 10850 4000
+F 0 "J3" H 10850 4150 50  0000 C CNN
+F 1 "CONN_01X02" V 10950 4000 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 10850 4000 50  0001 C CNN
+F 3 "" H 10850 4000 50  0001 C CNN
+	1    10850 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 4050 10650 4400
+Wire Wire Line
+	10650 4400 10350 4400
+Connection ~ 10350 4400
+$Comp
+L CONN_01X02 J1
+U 1 1 59A70A2C
+P 5050 2900
+F 0 "J1" H 5050 3050 50  0000 C CNN
+F 1 "CONN_01X02" V 5150 2900 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 5050 2900 50  0001 C CNN
+F 3 "" H 5050 2900 50  0001 C CNN
+	1    5050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2850 4850 2850
+Connection ~ 3850 2850
+Wire Wire Line
+	4850 2950 4850 3700
+Wire Wire Line
+	4600 3700 5700 3700
+Connection ~ 4600 3700
+$Comp
+L CONN_01X02 J2
+U 1 1 59A71347
+P 5500 3350
+F 0 "J2" H 5500 3500 50  0000 C CNN
+F 1 "CONN_01X02" V 5600 3350 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 5500 3350 50  0001 C CNN
+F 3 "" H 5500 3350 50  0001 C CNN
+	1    5500 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3300 5700 3000
+Connection ~ 5700 3000
+Wire Wire Line
+	5700 3700 5700 3400
+Connection ~ 4850 3700
+$EndSCHEMATC
